@@ -10,7 +10,19 @@ public class KnapsackProblem {
 	int maxWeight=6;
 	System.out.println(getMaximumOfItems(items, profit, items.length, maxWeight));
 	}
-	
+	/*
+	 * Function Parameter -> (weight[],itemProfil[],int nItems,int maxWeight)
+	 * 
+	 * Check if current item weight is lesser than maxWeight , 
+	 * if not then 
+	 * call function again without item (decreasing nItems count)
+	 * if yes
+	 * calculate profit by keeping item
+	 * calculate profile by not considering item
+	 * return the max from the two above.
+	 * 
+	 * 
+	 */
 	
 	public static int getMaximumOfItems(int weight[],int profit[],int curItem,int maxWeight)
 	{

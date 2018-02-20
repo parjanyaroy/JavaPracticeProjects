@@ -10,6 +10,21 @@ public class KadaneAlgorithm {
 		System.out.println(result[0]+" "+result[1]+" "+result[2]+" ");
 	}
 	
+	/**
+	 *  Resulting array stores [startIndex,EndIndex,SumTillNow]
+	 * 	
+	 * Traverse across the FULL array and add elements to a tempSum.Initialize 
+	 * sumTillNow as minimum interger value
+	 * 1.if tempsum>finalsum
+	 * 		Note tempstartindex , current iteration value as endindex and sumTillNow
+	 * 2.if tempsum<0 that means previous values are not to be considerered
+	 * 		reset tempSum
+	 * 		set tempstartindex as the next iteration value
+	 * 
+	 */
+	
+	
+	
 	public int[] findMaxSubarray(int arr[])
 	{
 		int[] result = new int[3];

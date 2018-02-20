@@ -1,5 +1,7 @@
 package com.heap;
 
+import java.util.Random;
+
 public class ConnectNRopes {
 	
 	public static void main(String[] args) {
@@ -20,6 +22,9 @@ public class ConnectNRopes {
 		}
 		
 		System.out.println("Minimum Cost Of Connecting the ropes "+res);
+		Random r1 = new Random();
+		System.out.println(r1.hashCode());
+		System.out.println(System.identityHashCode(r1));
 		
 		
 	}

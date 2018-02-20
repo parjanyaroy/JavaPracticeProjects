@@ -20,7 +20,7 @@ public class DeleteAlternateNodes {
 		d1.deleteAlternateNodes();
 		l1.printList();
 	}
-	
+	/* SIMPLE LOGIC . JUST SET NEXT POINTER TO NEXT.NEXT . CHECK EXISTS BEFORE SETTING*/
 	void deleteAlternateNodes()
 	{
 		Node ptr=head;

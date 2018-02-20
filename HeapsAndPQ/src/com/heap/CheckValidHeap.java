@@ -1,7 +1,10 @@
 package com.heap;
 
 public class CheckValidHeap {
-
+	/*
+	 * JUST CHECK THAT CURRENT ELEMENT IS LESSER THAN LEFT CHILD AND RIGHT CHILD
+	 * AND RECURSIVELY CALL THE FUNCTION FOR LEFT CHILD AND RIGHT CHILD
+	 */
 	static boolean isHeapValid(int i,BinaryHeap b1)
 	{
 		if(i>((b1.count-1)/2))

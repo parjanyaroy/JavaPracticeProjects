@@ -25,66 +25,74 @@ public class BinaryTreeProblems {
 		// int x=b1.gUI("Enter Element To Be Searched");
 		// System.out.println(b1.searchElementInBinaryTree(b1.root, x));
 
-		 /*System.out.println("No of elements In Tree " +
-		 b1.findNoOfElements(b1.root));
-		 System.out.println("Max Depth Of Tree " + b1.findDepthOfTree(b1.root,
-		 true));
-		 System.out.println("Min Depth Of Tree " + b1.findDepthOfTree(b1.root,
-		 false));*/
+		/*
+		 * System.out.println("No of elements In Tree " +
+		 * b1.findNoOfElements(b1.root)); System.out.println(
+		 * "Max Depth Of Tree " + b1.findDepthOfTree(b1.root, true));
+		 * System.out.println("Min Depth Of Tree " + b1.findDepthOfTree(b1.root,
+		 * false));
+		 */
 
-		 /*int x1=b1.gUI("Enter Node Elememt To Be Searched");
-		 System.out.println(b1.searchNodeInTree(b1.root, x1));*/
+		/*
+		 * int x1=b1.gUI("Enter Node Elememt To Be Searched");
+		 * System.out.println(b1.searchNodeInTree(b1.root, x1));
+		 */
 
-		 /*int x2=b1.gUI("Enter Node Elememt To Be Deleted");
-		 System.out.println(b1.deleteNodeOfTree(b1.root, x2));
-		 BTreePrinter.printNode(b1.root);*/
+		/*
+		 * int x2=b1.gUI("Enter Node Elememt To Be Deleted");
+		 * System.out.println(b1.deleteNodeOfTree(b1.root, x2));
+		 * BTreePrinter.printNode(b1.root);
+		 */
 
-		 /*Node cloneRoot = b1.cloneATree(b1.root);
-		 cloneRoot.left.data = -1;
-		 cloneRoot.right.right = null;
-		 BTreePrinter.printNode(cloneRoot);
-		 System.out.println("Check If Trees are isomorphic " +
-		 b1.isStructurallyIdentical(b1.root, cloneRoot));
-		 System.out.println("Check If Trees are identical " +
-		 b1.isIdentical(b1.root, cloneRoot));*/
+		/*
+		 * Node cloneRoot = b1.cloneATree(b1.root); cloneRoot.left.data = -1;
+		 * cloneRoot.right.right = null; BTreePrinter.printNode(cloneRoot);
+		 * System.out.println("Check If Trees are isomorphic " +
+		 * b1.isStructurallyIdentical(b1.root, cloneRoot)); System.out.println(
+		 * "Check If Trees are identical " + b1.isIdentical(b1.root,
+		 * cloneRoot));
+		 */
 
-		 /*System.out.println("Check Width Of Tree " +
-		 b1.getWidthOfTree(b1.root));*/
+		/*
+		 * System.out.println("Check Width Of Tree " +
+		 * b1.getWidthOfTree(b1.root));
+		 */
 
-		 /*int x3=b1.gUI("Enter Node Elememt To Get Path");
-		 b1.findPathToNode(b1.root, x3);
-		 System.out.println("Path To Node From Root");
-		 Set<Integer> findPathToNode = b1.findPathToNode(b1.root, x3);
-		 for(int i : findPathToNode)
-		 {
-		 System.out.print(i+" ");
-		 }*/
-		
+		/*
+		 * int x3=b1.gUI("Enter Node Elememt To Get Path");
+		 * b1.findPathToNode(b1.root, x3); System.out.println(
+		 * "Path To Node From Root"); Set<Integer> findPathToNode =
+		 * b1.findPathToNode(b1.root, x3); for(int i : findPathToNode) {
+		 * System.out.print(i+" "); }
+		 */
+
 		/*
 		 * int x4=b1.gUI("Enter First Node To Get Common Ancestor:"); int
 		 * x5=b1.gUI("Enter Second Node To Get Common Ancestor:");
 		 * System.out.println("Common Ancestor is :"+b1.findCommonAncestor(x4,
 		 * x5, b1.root));
 		 */
-		
-		
-		/*int x4 = b1.gUI("Enter Sum:");
-		System.out.println("Checking For Sum:" + b1.isPathWithGivenSum(x4, b1.root));
+
+		/*
+		 * int x4 = b1.gUI("Enter Sum:"); System.out.println("Checking For Sum:"
+		 * + b1.isPathWithGivenSum(x4, b1.root));
 		 */
-		
-		/*Node mirrorRoot = b1.createMirrorTree(b1.root);
-		BTreePrinter.printNode(mirrorRoot);*/
-		
-		HashMap<Integer, Integer> h1 = new HashMap<>();
-		b1.getVerticalSum(b1.root, h1, 0);
-		System.out.println("Vertical Summation:");
-		for(Entry e : h1.entrySet())
-		{
-			System.out.println(e.getKey()+" "+e.getValue());
-		}
-		
-		
-		
+
+		/*
+		 * Node mirrorRoot = b1.createMirrorTree(b1.root);
+		 * BTreePrinter.printNode(mirrorRoot);
+		 */
+
+		/*
+		 * HashMap<Integer, Integer> h1 = new HashMap<>();
+		 * b1.getVerticalSum(b1.root, h1, 0); System.out.println(
+		 * "Vertical Summation:"); for(Entry e : h1.entrySet()) {
+		 * System.out.println(e.getKey()+" "+e.getValue()); }
+		 */
+		//b1.viewOfTree(b1.root);
+		//b1.leftviewOfTree(b1.root);
+		b1.rightviewOfTree(b1.root);
+
 	}
 
 	int gUI(String text) {
@@ -305,42 +313,103 @@ public class BinaryTreeProblems {
 			return newNode;
 		}
 	}
-	
-	int getVerticalSum(Node root,HashMap<Integer,Integer> map,int pos)
-	{
-		if(root==null)
+
+	int getVerticalSum(Node root, HashMap<Integer, Integer> map, int pos) {
+		if (root == null)
 			return 0;
-		else
-		{
-			if(null==map.get(pos))
-				map.put(pos,root.data);
-			else
-			{
-			int newSum = root.data+map.get(pos);
-			map.put(pos,newSum);
+		else {
+			if (null == map.get(pos))
+				map.put(pos, root.data);
+			else {
+				int newSum = root.data + map.get(pos);
+				map.put(pos, newSum);
 			}
-		getVerticalSum(root.left, map, pos-1);
-		getVerticalSum(root.right, map, pos+1);
-		return 1;
+			getVerticalSum(root.left, map, pos - 1);
+			getVerticalSum(root.right, map, pos + 1);
+			return 1;
 		}
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+	void viewOfTree(Node root) {
+		if (root == null)
+			return;
+		Queue<Node> q1 = new LinkedList<Node>();
+		q1.add(root);
+		int count = 1;
+		while (1 == 1) {
+			count = q1.size();
+			if (count == 0)
+				break;
+			while (count > 0) {
+				Node n = q1.remove();
+				System.out.print(n.data + " ");
+				if (null != n.left)
+					q1.add(n.left);
+				if (null != n.right)
+					q1.add(n.right);
+				count--;
+			}
+			System.out.println();
+		}
+
+	}
+
+	void leftviewOfTree(Node root)
+	{
+		if(root==null)
+			return;
+		Queue<Node> q1 = new LinkedList<Node>();
+		q1.add(root);
+		int count=1;
+		
+		while(1==1)
+		{
+			boolean firstElement=true;
+			count = q1.size();
+			if(count==0)
+				break;
+			while(count>0)
+			{
+				Node n = q1.remove();
+				if(firstElement)
+				{
+				System.out.print(n.data+" ");
+				firstElement=false;
+				}
+				if(null!=n.left)
+					q1.add(n.left);
+				if(null!=n.right)
+					q1.add(n.right);
+				count --;
+			}
+			System.out.println();
+		}
+	}
+
+	void rightviewOfTree(Node root) {
+		if (root == null)
+			return;
+		Queue<Node> q1 = new LinkedList<Node>();
+		q1.add(root);
+		int count = 1;
+
+		while (1 == 1) {
+			count = q1.size();
+			if (count == 0)
+				break;
+			while (count > 0) {
+				Node n = q1.remove();
+				if (count == 1)
+					System.out.print(n.data + " ");
+
+				if (null != n.left)
+					q1.add(n.left);
+				if (null != n.right)
+					q1.add(n.right);
+				count--;
+			}
+			System.out.println();
+		}
+	}
 
 }

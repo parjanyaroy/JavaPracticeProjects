@@ -1,8 +1,10 @@
 package com.pj.collection.hashmap;
 
 import java.util.Iterator;
+import java.util.Map;
 import java.util.PriorityQueue;
 import java.util.Queue;
+import java.util.TreeMap;
 
 public class PriorityQueue1 {
 	
@@ -31,7 +33,15 @@ public class PriorityQueue1 {
 		while(!testQueue.pq1.isEmpty())
 		System.out.println(testQueue.pq1.poll().getName());
 		// Order Of Printing EFG(Z)->XYZ(F)->PQR(F)->ABC(B)->RST(A)
-		
+		Map m1 = new TreeMap<Customer,Integer>();
+		m1.put(c1,1);
+		m1.put(c2,2);
+		m1.put(c4,3);
+		Iterator i1 = m1.entrySet().iterator();
+		while(i1.hasNext())
+		{
+			System.out.println(((Map.Entry<Customer, Integer>)i1.next()).getKey().toString());
+		}
 	}
 	
 	

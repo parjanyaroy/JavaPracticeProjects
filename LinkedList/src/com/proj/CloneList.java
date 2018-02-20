@@ -143,6 +143,14 @@ public class CloneList {
 	}
 
 	public TwoPtrList cloneCurrentList(TwoPtrList head) {
+		/* TO CLONE THE LIST USE THE HASH MAP 
+		 * Hashmap
+		 * 
+		 * Original Node Ref	---- Created new Node with Data
+		 * A.next=B				---- A.next=B
+		 * A.rand=X					 A.rand=X
+		 * 
+		 */
 		HashMap<TwoPtrList,TwoPtrList> storeMap = new HashMap<>();
 		TwoPtrList newListHead=null;
 		TwoPtrList head1=head;

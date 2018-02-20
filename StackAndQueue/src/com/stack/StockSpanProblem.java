@@ -8,9 +8,9 @@ public class StockSpanProblem {
 		StackArray s1 = new StackArray(10);
 		int stockval [] = new int[10];
 		int stockspan [] = new int[10];
-		for(int i=0;i<10;i++)
-			stockval[i]=ThreadLocalRandom.current().nextInt(1,6);
-		//stockval =new int[] {1,8,4,3,5,7,2,4,6,9};
+		/*for(int i=0;i<10;i++)
+			stockval[i]=ThreadLocalRandom.current().nextInt(1,6);*/
+		stockval =new int[] {1,8,4,3,5,7,2,4,6,9};
 		s1.push(1);
 		stockspan[0]=1;
 		
@@ -26,7 +26,12 @@ public class StockSpanProblem {
 		}
 		for(int i=0;i<10;i++)
 		{
-			System.out.println(stockval[i]+" "+stockspan[i]);
+			System.out.print(stockval[i]+" ");
+		}
+		System.out.println();
+		for(int i=0;i<10;i++)
+		{
+			System.out.print(stockspan[i]+" ");
 		}
 	}
 	

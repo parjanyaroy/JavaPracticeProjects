@@ -12,6 +12,26 @@ public class QueueArray {
 		this.max_size = n;
 	}
 	// Elements are dequeued from the front and enqueued from the rear;
+	
+	
+	/*
+	 * Queue Array Rules
+	 * 
+	 * queue empty: front=-1 , rear=-1
+	 * queue full : front + 1 == rear  OR (front + 1 == max_size && rear == 0)
+	 * 		
+	 * Enqueue element At the rear
+	 * 1. When Queue is empty
+	 * 2. Normal Insertion at middle
+	 * 3. Insertion after reaching array max size but having space in front
+	 * Queue is full
+	 * 
+	 * Dequeue element at the front
+	 * 1.Dequeue at normal middle position
+	 * 2.Dequeue at last element of the queue
+	 * 3.Dequeue at the end of the array
+	 * Queue is empty
+	 */
 
 	void enqueue(int data){
 		if(rear==-1 && front==-1)

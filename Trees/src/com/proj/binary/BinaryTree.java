@@ -175,7 +175,9 @@ public class BinaryTree {
 			System.out.println();
 		}
 	}
-
+	/* Push Root.
+	 * Iterate : pop node .process node . push left . push right
+	 */
 	void preOrderIterative(Node root) {
 		Stack<Node> s1 = new Stack<Node>();
 		s1.push(root);
@@ -188,7 +190,10 @@ public class BinaryTree {
 				s1.push(temp.left);
 		}
 	}
-
+	/* currentnode=root
+	 *  Iterate : 	push currentnode and all left elements untill null . 
+	 *  			Pop and process node . if right child set as current node.
+	 */
 	void inOrderIterative(Node root) {
 		Stack<Node> s1 = new Stack<>();
 		Node currentNode = root;
@@ -206,7 +211,11 @@ public class BinaryTree {
 			}
 		}
 	}
-
+	/*	Iterate:
+	 * Traverse left path pushing first right child and then current node for each
+	 * 
+	 */
+			
 	void postOrderIterative(Node root) {
 		Stack<Node> s1 = new Stack<>();
 		Node currentNode = root;

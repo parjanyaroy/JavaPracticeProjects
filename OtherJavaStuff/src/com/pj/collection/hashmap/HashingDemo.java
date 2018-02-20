@@ -1,6 +1,9 @@
 package com.pj.collection.hashmap;
 
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Map.Entry;
 
 // Look into the internal structure of hashmap , concurrent hashmap after
 // initialization . Observe rehashing process
@@ -39,6 +42,21 @@ public class HashingDemo {
 		hm1.put(c12,12);
 		hm1.put(c13,13);
 		hm1.put(c14,14);
+		
+		Iterator i1 = hm1.keySet().iterator();
+		while(i1.hasNext())
+		{
+			Customer  key =  (Customer) i1.next();
+			System.out.println(hm1.get(key));
+//			/System.out.println();
+		}
+		System.out.println("--------------------------------------");
+		Iterator i2 = hm1.entrySet().iterator();
+		while(i2.hasNext())
+		{
+			Map.Entry<Customer, Integer> entry = (Entry<Customer, Integer>) i2.next();
+			System.out.println(entry.getKey()+" "+entry.getValue());
+		}
 		
 		
 

@@ -1,6 +1,7 @@
 package com.pj.collection.hashmap;
 
-public class Customer implements Comparable {
+public class Customer //implements Comparable 
+{
 
 	private String name;
 	private String customerGrade;
@@ -42,10 +43,10 @@ public class Customer implements Comparable {
 		this.customerGrade=grade;
 	}
 	
-	@Override
+	/*@Override
 	public int compareTo(Object arg0) {
 		return ((Customer)arg0).getCustomerGrade().compareTo(this.getCustomerGrade());
-	}
+	}*/
 
 	public String getName() {
 		return name;
@@ -61,6 +62,11 @@ public class Customer implements Comparable {
 
 	public void setCustomerGrade(String customerGrade) {
 		this.customerGrade = customerGrade;
+	}
+
+	@Override
+	public String toString() {
+		return "Customer [name=" + name + ", customerGrade=" + customerGrade + "]";
 	}
 	
 	

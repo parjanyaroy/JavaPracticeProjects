@@ -39,15 +39,17 @@ public class LkdList
 		l1.addNodeToList(5);
 		l1.printList();
 		/*l1.head=l1.reverseList();
-		l1.printList();
-		l1.head=l1.reversePair();
 		l1.printList();*/
+		l1.head=l1.reversePair();
+		l1.printList();
 		
 	}
 	
 	public Node reversePair()
 	{
+		// Assign ptr to begining of the list 
 		Node ptr = head;
+		// Create a new head
 		Node newHead = null;
 		if(ptr==null)
 			return null;
@@ -59,6 +61,16 @@ public class LkdList
 		Node nodeB=null;
 		while(null!=ptr)
 		{
+			/*
+			 * 1->2->3->4
+			 * 
+			 * A -1
+			 * B -2
+			 * temp - B.next - 3
+			 * swap A and B 
+			 * if this is the first set of nodes then set B as the new head
+			 * else provide linkage to previous
+			 */
 			if(ptr.next!=null)
 			{
 			nodeA=ptr;
@@ -156,6 +168,40 @@ public class LkdList
 	
 	// SORTING OF A LINKED LIST WITH MERGE SORT
 	
+	
+	
+	public Node doMergeSort(Node head,boolean ascending)
+	{	// Just a simple utility to decide whether its an ascending sort or a descending sort
+		if(ascending)
+		{
+			return mergeSort(head);
+		}
+		else
+		{
+			Node Newhead= mergeSort(head);
+			return reverseList(Newhead);
+		}
+	}
+	
+	private Node mergeSort(Node head) // FUNCTION SIGNATURE : ONLY ONE PARAMETER
+	{
+		Node mergedList=null;
+		if(head==null || head.next==null)
+		{
+			return head;
+		}
+		else
+		{
+			Node temp = findMiddle(head);
+			Node listB = temp.next;
+			temp.next=null;
+			Node list1=mergeSort(head);
+			Node list2=mergeSort(listB);
+			mergedList = mergeList(list1, list2); // ONLY TWO PARAMETER
+		}
+		return mergedList;
+	}
+	
 	private Node findMiddle(Node head)
 	{
 		if(head==null || head.next==null)
@@ -173,38 +219,6 @@ public class LkdList
 		}
 		return slowPtr;
 		
-	}
-	
-	public Node doMergeSort(Node head,boolean ascending)
-	{
-		if(ascending)
-		{
-			return mergeSort(head);
-		}
-		else
-		{
-			Node Newhead= mergeSort(head);
-			return reverseList(Newhead);
-		}
-	}
-	
-	private Node mergeSort(Node head)
-	{
-		Node mergedList=null;
-		if(head==null || head.next==null)
-		{
-			return head;
-		}
-		else
-		{
-			Node temp = findMiddle(head);
-			Node listB = temp.next;
-			temp.next=null;
-			Node list1=mergeSort(head);
-			Node list2=mergeSort(listB);
-			mergedList = mergeList(list1, list2);
-		}
-		return mergedList;
 	}
 	
 	public Node mergeList(Node listA,Node listB)

@@ -24,8 +24,7 @@ public class CalculateCheckSum {
 		DigestInputStream dis = new DigestInputStream(bis, algorithm);
 
 		// read the file and update the hash calculation
-		while (dis.read() != -1)
-			;
+		while (dis.read() != -1);
 
 		// get the hash value as byte array
 		byte[] hash = algorithm.digest();

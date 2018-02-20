@@ -6,7 +6,10 @@ public class CheckPalindrome {
 	
 	Node head=null;
 	Node middleNode=null;
-	
+	/* Find middle of the list
+	 * reverse the list from middle and add to the current list
+	 * start scanning with dual pointer from begining and middle . Any mismatch return false
+	 */
 	public static void main(String args[]) {
 		LkdList l1 = new LkdList();
 		l1.head = new Node(1);
