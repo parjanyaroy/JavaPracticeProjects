@@ -51,6 +51,7 @@ public class CalculateCheckSum {
 		MessageDigest md5 = MessageDigest.getInstance("MD5");
 		String sha1Hash = null, md5Hash = null;
 		String path="C:\\Users\\parroy\\Desktop\\";
+		//String filename="FF_FORMULAS_B_F.dat";
 		String filename="checksum.txt";
 		sha1Hash = calculateHash(sha1, path + filename);
 		md5Hash = calculateHash(md5, path + filename);

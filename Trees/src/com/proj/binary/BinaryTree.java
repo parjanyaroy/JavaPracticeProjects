@@ -176,7 +176,7 @@ public class BinaryTree {
 		}
 	}
 	/* Push Root.
-	 * Iterate : pop node .process node . push left . push right
+	 * Iterate : pop node .process node . push right . push left 
 	 */
 	void preOrderIterative(Node root) {
 		Stack<Node> s1 = new Stack<Node>();
@@ -197,7 +197,7 @@ public class BinaryTree {
 	void inOrderIterative(Node root) {
 		Stack<Node> s1 = new Stack<>();
 		Node currentNode = root;
-		while (1 == 1) {
+		while (true) {
 			while (currentNode != null) {
 				s1.push(currentNode);
 				currentNode = currentNode.left;

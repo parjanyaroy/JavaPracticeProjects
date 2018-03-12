@@ -7,5 +7,10 @@ public class GreetingImpl implements Greeting {
 		System.out.println("Hello World");
 
 	}
+	@Override
+	public String sayHello()
+	{
+		return "Overridden";
+	}
 
 }

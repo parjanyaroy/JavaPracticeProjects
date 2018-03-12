@@ -17,5 +17,10 @@ public class PlayerPiece extends GameShape implements Animatable {
 	{
 		System.out.println("Move piece from PlayerPiece");
 	}
+	
+	public void someMethod()
+	{
+		System.out.println("Sub class someMethod");
+	}
 
 }

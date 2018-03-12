@@ -143,7 +143,7 @@ public class Graph {
 		int j=itr.next();
 		if(!visited[j])
 		{
-			visited[j]=true;
+			//visited[j]=true;
 			sortGraph(visited, s1, j);
 		}
 		

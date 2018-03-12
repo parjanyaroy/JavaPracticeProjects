@@ -12,7 +12,22 @@ public class BinaryHeap {
 	 * WHEN EXTRACTING ELEMENT FROM HEAP: EXTRACT THE 0TH ELEMENT . SWAP LAST ELEMENT OF HEAP WITH IT.THEN
 	 * CHECK WHETHER THE ELEMENT IS GREATER THAN ITS CHILDREN , IF YES THEN SWAP WITH THE SMALLEST CHILD.
 	 * HEAPIFY DOWN FOR (COUNT-1)/2 ITERATIONS ALSO WHILE CHECKING GREATER/LESSER CONDITION
+	 * Methods are:
 	 * 
+	 *  boolean isEmpty()
+	 *  boolean isFull()
+	 *  int getMin()
+	 *  
+	 *  int getLeft(int indexI)
+	 *  int getRight(int indexI)
+	 *  int getParent(int indexI)
+	 *  void swap(int i,int j)
+	 *  
+	 *  int getSmallestChild(int i)
+	 *  
+	 *  
+	 *  
+	 *  
 	 */
 	
 	

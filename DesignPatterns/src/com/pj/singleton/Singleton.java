@@ -9,7 +9,7 @@ public class Singleton {
 	{
 		if(instance==null)
 		{
-		synchronized(instance)
+		synchronized(Singleton.class)
 		{
 		if(instance==null)
 		{

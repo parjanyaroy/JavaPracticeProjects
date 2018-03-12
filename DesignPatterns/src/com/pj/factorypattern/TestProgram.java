@@ -14,14 +14,13 @@ public class TestProgram {
 	 */
 
 	public static void main(String[] args) {
-		BillFactory b1 = new BillFactory();
 		/* Here only the requested type of object is passed as a string parameter
 		 * and the factory pattern creates a corresponding subclass type .
 		 */
-		Plan p1 = b1.getPlan("CorporatePlan");
+		Plan p1 = BillFactory.getPlan("CorporatePlan");
 		if(null!=p1)
 			System.out.println("Consumption Cost is :"+p1.calculateUnits(30));
-		p1 = b1.getPlan("DomesticPlan");
+		p1 = BillFactory.getPlan("DomesticPlan");
 		if(null!=p1)
 			System.out.println("Consumption Cost is :"+p1.calculateUnits(30));
 	}

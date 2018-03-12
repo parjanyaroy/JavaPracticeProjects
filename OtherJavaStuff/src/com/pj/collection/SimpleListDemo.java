@@ -11,6 +11,16 @@ public class SimpleListDemo{
   al.add("Anamika");
   al.add("Sweety");
   
+  al.add(1, "ABC");
+  al.set(0, "PJ");
+  
+  
+  Iterator itr=al.iterator();
+  while(itr.hasNext()){
+   System.out.println(itr.next());
+  }
+  System.out.println("------------------------------");
+  
   ArrayList al2 = new ArrayList();
   al2.add("Anamika");
   al2.add("Vinesh");
@@ -18,7 +28,7 @@ public class SimpleListDemo{
   //al.removeAll(al2);
   al.retainAll(al2);
 
-  Iterator itr=al.iterator();
+  itr=al.iterator();
   while(itr.hasNext()){
    System.out.println(itr.next());
   }

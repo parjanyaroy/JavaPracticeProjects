@@ -66,6 +66,12 @@ public class LambdaMisc {
 		// Following are the three ways of defining implementation of Greeting interface
 		// 1. By Actual Implementation
 		Greeting g1 = new GreetingImpl();
+		
+		System.out.println("-------------");
+		System.out.println(g1.sayHello());
+		System.out.println(g1.sayHi());
+		g1.sayHello();
+		System.out.println("-------------");
 		// 2. By Anonymous Inner Class
 		Greeting g2 = new Greeting(){
 			public void perform()

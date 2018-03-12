@@ -2,7 +2,7 @@ package com.pj.factorypattern;
 
 public class BillFactory {
 	
-	public Plan getPlan(String planType)
+	public static Plan getPlan(String planType)
 	{
 		if(planType==null)
 			return null;
