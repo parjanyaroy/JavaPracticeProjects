@@ -12,10 +12,10 @@ public class IteratorDemo {
 		List<String> myList = new ArrayList<>();
 		for (int i = 1; i < 10; i++)
 			myList.add(i+"");
-		/*
+		
 		new Thread(new Runnable() {
 			public void run() {
-				Iterator<Integer> i1 = myList.iterator();
+				Iterator<String> i1 = myList.iterator();
 				while (i1.hasNext()) {
 					try {
 						Thread.sleep(100);
@@ -35,7 +35,7 @@ public class IteratorDemo {
 
 			}
 		}).start();
-		*/
+		
 		System.out.println("-----------TESTING LIST ITERATOR-----------------");
 		ListIterator<String> iList = myList.listIterator();
 		while(iList.hasNext()){

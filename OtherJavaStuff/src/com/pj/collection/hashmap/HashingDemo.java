@@ -58,8 +58,6 @@ public class HashingDemo {
 			System.out.println(entry.getKey()+" "+entry.getValue());
 		}
 		
-		
-
 	}
 
 }

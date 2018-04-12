@@ -22,19 +22,7 @@ public class MergeKSortedArrays {
 		int[] arrCtr= new int[arr.length];
 		Arrays.fill(arrCtr, 0);
 		BinaryHeap b1 = new BinaryHeap(arr.length);
-		while(ctr<finalSize)
-		{
-			(int i=1;i<arr.length;i++)
-			{
-				int element=arr[i][arrCtr[i]];
-				b1.insert(element);
-			}
-			int res=b1.extractMin();
-			arr[]
-			resArr[ctr]=res;
-			ctr++;
-		}
-		
+				
 	}
 
 }

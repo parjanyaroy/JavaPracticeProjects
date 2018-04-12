@@ -1,11 +1,14 @@
 package com.pj.singleton;
-public class Singleton {
+
+import java.io.Serializable;
+
+public class Singleton  extends SingletonSuper implements Serializable{
 
 	private static volatile Singleton instance = null;
 	
 	private Singleton(){}
 	
-	public Singleton getInstance()
+	public static Singleton getInstance()
 	{
 		if(instance==null)
 		{
